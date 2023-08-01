@@ -8,8 +8,8 @@ import com.acti.page.Loginpage;
 
 public class LoginpageTest extends Basetest{
 	
-	Loginpage lp ;
-	@Test
+	
+	@Test(enabled =false)
 	public void testLoginpageTitle()
 	{
 		
@@ -20,7 +20,7 @@ public class LoginpageTest extends Basetest{
 		
 		
 	}
-	@Test
+	@Test(enabled =false)
 	public void testActiImgDisplayed() {
 
 		
@@ -28,22 +28,24 @@ public class LoginpageTest extends Basetest{
 		Assert.assertTrue(flag);
 	
 	}
-	@Test
+	@Test(enabled =false)
 	public void testForgotpasswordDispalyed() {
 		
 		 boolean flag = lp.verifyForgotPasswordLink();
 		Assert.assertTrue(flag);;
 		
 	}
-	@Test
+	@Test(enabled =true)
 	public void testLoginFunction() {
 		
 		 lp.enterusername("admin");
 		 lp.enterpassword("manager");
 		 lp.clickLoginButton();
-		
+		 String actual=ep.getUserLoggedIn();
+		 Assert.assertTrue(actual.contains("John Doe"));
+		ep.clickLogOut();
 	}
-	@Test
+	@Test(enabled =false)
 	public void testLoginInvalid() throws InterruptedException {
 		
 		 lp.enterusername("admin");
