@@ -1,5 +1,7 @@
 package com.acti.page;
 
+import org.openqa.selenium.support.PageFactory;
+
 import com.acti.base.Driverscript;
 
 /* Name Enter page
@@ -9,5 +11,16 @@ reviewed by:-
 */
 
 public class Enterpage extends Driverscript{
+	//**************************page Locator**********************//
+	
+	
+	
+	//**************************page Initalization**********************//
+	
+	public Enterpage() {
+		PageFactory.initElements(driver, this);
+	
+	
 
+	//**************************page Method**********************//
 }
