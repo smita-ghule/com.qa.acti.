@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.acti.testcase.LoginpageTest">
+      <class name="com.acti.testcase.login">
         <methods>
-          <include name="testLoginInvalid"/>
-          <include name="testForgotpasswordDispalyed"/>
+          <include name="testLoginFunction"/>
           <include name="teardown"/>
           <include name="pretest"/>
-          <include name="testActiImgDisplayed"/>
-          <include name="testLoginpageTitle"/>
-          <include name="testLoginFunction"/>
         </methods>
-      </class> <!-- com.acti.testcase.LoginpageTest -->
+      </class> <!-- com.acti.testcase.login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
